@@ -19,7 +19,7 @@
         android:id="@+id/imageView6"
         android:layout_width="125dp"
         android:layout_height="137dp"
-        app:srcCompat="@drawable/lgoo"
+        app:srcCompat="@drawable/imageshape"
         tools:layout_editor_absoluteX="130dp"
         tools:layout_editor_absoluteY="61dp" />
 </android.support.constraint.ConstraintLayout>
