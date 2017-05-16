@@ -1,0 +1,439 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/title"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="top"
+        android:padding="5dp"
+        android:text="Donor Registrtion"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollViewRecords"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRecords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/nameinputlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:theme="@style/EditTextHint">
+
+                <EditText
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittextborder2"
+                    android:drawableLeft="@drawable/userid"
+                    android:drawablePadding="10dp"
+                    android:hint="Enter Name"
+                    android:inputType="text"
+                    android:paddingLeft="10dip"
+
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/dateinputlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/txtlastDateDonate"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder2"
+                        android:drawableLeft="@drawable/userid"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Enter BirthDate"
+                        android:inputType="date"
+                        android:paddingLeft="10dip"
+                        android:textColor="?android:attr/textColorPrimaryInverse"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/txtAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder2"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:drawableLeft="@drawable/userid"
+                        android:drawablePadding="10dp"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Age"
+                        android:inputType="numberSigned"
+                        android:paddingLeft="10dip"
+                        android:textColor="?android:attr/textColorPrimaryInverse"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:theme="@style/EditTextHint">
+
+                <Spinner
+                    android:id="@+id/countryspinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/userid"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Select Country"
+
+                    android:paddingLeft="10dip" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/zipinputlayout"
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:theme="@style/EditTextHint">
+
+                    <Spinner
+                        android:id="@+id/zipCodeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="8dp"
+
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/userid"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Select Country"
+
+                        android:paddingLeft="10dip" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/phoneInputlyout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/txtphoneNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder2"
+                        android:drawableLeft="@drawable/userid"
+                        android:drawablePadding="10dp"
+                        android:hint="Enter Phone No"
+                        android:inputType="numberSigned"
+                        android:paddingLeft="10dip"
+                        android:textColor="?android:attr/textColorPrimaryInverse"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/emilinputlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:theme="@style/EditTextHint">
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittextborder2"
+                    android:drawableLeft="@drawable/userid"
+                    android:drawablePadding="10dp"
+                    android:hint="Enter Email Address"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dip"
+
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cityinputlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:theme="@style/EditTextHint">
+
+                <EditText
+                    android:id="@+id/txtCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittextborder2"
+                    android:drawableLeft="@drawable/userid"
+                    android:drawablePadding="10dp"
+                    android:hint="Enter City"
+                    android:inputType="textAutoCorrect"
+                    android:paddingLeft="10dip"
+
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/stteInputlyout"
+                    android:layout_width="177dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/txtState"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder2"
+                        android:drawableLeft="@drawable/userid"
+                        android:drawablePadding="10dp"
+                        android:hint="Enter State"
+                        android:inputType="textAutoCorrect"
+
+                        android:paddingLeft="10dip"
+                        android:textColor="?android:attr/textColorPrimaryInverse"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/zipInputlyout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/txtZip"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder2"
+                        android:drawableLeft="@drawable/userid"
+                        android:drawablePadding="10dp"
+                        android:hint="Enter Zip"
+                        android:inputType="textPostalAddress"
+
+                        android:paddingLeft="10dip"
+                        android:textColor="?android:attr/textColorPrimaryInverse"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/AddressInputlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:theme="@style/EditTextHint">
+
+                <EditText
+                    android:id="@+id/txt_Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittextborder2"
+                    android:drawableLeft="@drawable/userid"
+                    android:drawablePadding="10dp"
+                    android:hint="Enter Address"
+                    android:inputType="textMultiLine"
+
+                    android:paddingLeft="10dip"
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:textSize="15sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="305dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/Donteinputlayout"
+                    android:layout_width="123dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="0dp"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/txtTDonate"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder2"
+                        android:drawableLeft="@drawable/userid"
+                        android:drawablePadding="10dp"
+                        android:hint="Total Donate"
+                        android:inputType="numberSigned"
+                        android:paddingLeft="10dip"
+                        android:textColor="?android:attr/textColorPrimaryInverse"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/lstdateinputlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/txtBirthDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder2"
+                        android:drawableLeft="@drawable/userid"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Last Blood Donation"
+                        android:inputType="date"
+                        android:paddingLeft="10dip"
+                        android:textColor="?android:attr/textColorPrimaryInverse"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txt_passInputLyout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:theme="@style/EditTextHint">
+
+                <EditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittextborder2"
+                    android:drawableLeft="@drawable/pass"
+                    android:drawablePadding="10dp"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dip"
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:textSize="15sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnReg"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/buttonshape"
+            android:text="Register"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:layout_weight="0.94" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appCompatButton2"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:text="Close"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

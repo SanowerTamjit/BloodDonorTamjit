@@ -3,5 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="imgshp">#598b2e</color>
+    <color name="imgshp">#a6a5a1</color>
+    <color name="green">#046b30</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="colorRipple">#A9A9F5</color>
 </resources>
