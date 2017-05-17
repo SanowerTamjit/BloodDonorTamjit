@@ -10,7 +10,7 @@
     <item android:state_focused="true">
         <shape android:shape="rectangle">
             <corners android:radius="3dp" />
-            <solid android:color="@color/colorPrimary" />
+            <solid android:color="#1974c4" />
         </shape>
     </item>
     <item>
