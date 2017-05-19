@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_viewdonor"
+            android:icon="@drawable/nav_home"
+            android:title="All Donor" />
+        <item
+            android:id="@+id/nav_finddonor"
+            android:icon="@drawable/nav_staff"
+            android:title="Find Donor" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_chngPass"
+            android:icon="@drawable/pass"
+            android:title="Change Password" />
+    </group>
+
+    <item
+        android:id="@+id/nav_logour"
+        android:icon="@drawable/nav_logout"
+        android:title="Log Out" />
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@android:drawable/ic_notification_clear_all"
+        android:title="Exit" />
+
+</menu>

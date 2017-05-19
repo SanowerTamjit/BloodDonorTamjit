@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.santam.blooddonortamjit.Dashboard"
+    tools:showIn="@layout/app_bar_dashboard">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="370dp"
+        android:layout_height="115dp"
+        android:layout_marginLeft="73dp"
+        android:text="Home Page. View Own Profile"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="364dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="489dp"
+        android:layout_height="152dp"
+        android:layout_marginLeft="17dp"
+        android:text="Blood Donation APP For Testing"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="71dp" />
+</android.support.constraint.ConstraintLayout>

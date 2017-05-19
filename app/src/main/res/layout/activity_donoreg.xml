@@ -1,9 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/linearLayout">
 
     <TextView
         android:id="@+id/textView1"
@@ -51,12 +53,30 @@
                     android:background="@drawable/edittextborder2"
                     android:drawableLeft="@drawable/userid"
                     android:drawablePadding="10dp"
-                    android:hint="Enter Name"
+                    android:hint="Enter Name *"
                     android:inputType="text"
                     android:paddingLeft="10dip"
 
                     android:textColor="?android:attr/textColorPrimaryInverse"
                     android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:theme="@style/EditTextHint">
+
+                <Spinner
+                    android:id="@+id/bloodSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="8dp"
+
+                    android:drawableLeft="@drawable/userid"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="10dip" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -66,24 +86,25 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/dateinputlayout"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="0dp"
                     android:layout_marginTop="0dp"
-                    android:layout_weight="1"
                     android:theme="@style/EditTextHint">
 
                     <EditText
                         android:id="@+id/txtlastDateDonate"
-                        android:layout_width="match_parent"
+                        android:layout_width="192dp"
                         android:layout_height="35dp"
-                        android:layout_weight="1"
                         android:background="@drawable/edittextborder2"
+                        android:cursorVisible="false"
                         android:drawableLeft="@drawable/userid"
                         android:drawablePadding="10dp"
+                        android:editable="false"
                         android:ems="10"
-                        android:hint="Enter BirthDate"
-                        android:inputType="date"
+                        android:focusableInTouchMode="true"
+                        android:hint="Enter BirthDate *"
+                        android:inputType="none"
                         android:paddingLeft="10dip"
                         android:textColor="?android:attr/textColorPrimaryInverse"
                         android:textSize="15sp" />
@@ -99,18 +120,14 @@
 
                     <EditText
                         android:id="@+id/txtAge"
-                        android:layout_width="match_parent"
+                        android:layout_width="108dp"
                         android:layout_height="35dp"
-                        android:layout_weight="1"
                         android:background="@drawable/edittextborder2"
                         android:clickable="false"
                         android:cursorVisible="false"
                         android:drawableLeft="@drawable/userid"
                         android:drawablePadding="10dp"
-                        android:editable="false"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:hint="Age"
+                        android:hint="Age *"
                         android:inputType="numberSigned"
                         android:paddingLeft="10dip"
                         android:textColor="?android:attr/textColorPrimaryInverse"
@@ -131,12 +148,8 @@
                     android:layout_height="35dp"
                     android:layout_marginTop="8dp"
 
-                    android:layout_weight="1"
                     android:drawableLeft="@drawable/userid"
                     android:drawablePadding="10dp"
-                    android:ems="10"
-                    android:hint="Select Country"
-
                     android:paddingLeft="10dip" />
             </android.support.design.widget.TextInputLayout>
 
@@ -154,18 +167,18 @@
                     android:theme="@style/EditTextHint">
 
                     <Spinner
-                        android:id="@+id/zipCodeSpinner"
+                        android:id="@+id/phnCodeSpinner"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_marginTop="8dp"
-
-                        android:layout_weight="1"
                         android:drawableLeft="@drawable/userid"
                         android:drawablePadding="10dp"
                         android:ems="10"
                         android:hint="Select Country"
-
                         android:paddingLeft="10dip" />
+
+
+
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -185,7 +198,7 @@
                         android:background="@drawable/edittextborder2"
                         android:drawableLeft="@drawable/userid"
                         android:drawablePadding="10dp"
-                        android:hint="Enter Phone No"
+                        android:hint="Enter Phone No *"
                         android:inputType="numberSigned"
                         android:paddingLeft="10dip"
                         android:textColor="?android:attr/textColorPrimaryInverse"
@@ -310,7 +323,7 @@
                     android:background="@drawable/edittextborder2"
                     android:drawableLeft="@drawable/userid"
                     android:drawablePadding="10dp"
-                    android:hint="Enter Address"
+                    android:hint="Enter Address *"
                     android:inputType="textMultiLine"
 
                     android:paddingLeft="10dip"
@@ -366,7 +379,10 @@
                         android:drawablePadding="10dp"
                         android:ems="10"
                         android:hint="Last Blood Donation"
-                        android:inputType="date"
+                        android:inputType="none"
+                        android:focusableInTouchMode="true"
+                        android:cursorVisible="false"
+                        android:editable="false"
                         android:paddingLeft="10dip"
                         android:textColor="?android:attr/textColorPrimaryInverse"
                         android:textSize="15sp" />
@@ -389,13 +405,79 @@
                     android:background="@drawable/edittextborder2"
                     android:drawableLeft="@drawable/pass"
                     android:drawablePadding="10dp"
-                    android:hint="Enter Password"
+                    android:hint="Enter Password *"
                     android:inputType="textPassword"
                     android:paddingLeft="10dip"
                     android:textColor="?android:attr/textColorPrimaryInverse"
                     android:textSize="15sp" />
 
             </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txt_repassInputLyout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:theme="@style/EditTextHint">
+
+                <EditText
+                    android:id="@+id/txtRePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittextborder2"
+                    android:drawableLeft="@drawable/pass"
+                    android:drawablePadding="10dp"
+                    android:hint="Retype Password *"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dip"
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:textSize="15sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.76"
+                    app:srcCompat="@drawable/abc" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="113dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="0.76"
+                    android:theme="@style/EditTextHint">
+
+                    <EditText
+                        android:id="@+id/txtImgView"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@drawable/edittextborder2"
+
+                        android:drawableLeft="@drawable/userid"
+                        android:drawablePadding="10dp"
+                        android:textColor="?android:attr/textColorPrimaryInverse"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/browse"
+                    android:layout_width="190dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/buttonshape"
+                    android:text="Browse "
+                    android:textColor="#FFF"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -427,7 +509,7 @@
             android:layout_weight="0.94" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/appCompatButton2"
+            android:id="@+id/btncls"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape"
